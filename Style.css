@@ -1,14 +1,14 @@
 body 
     {
-    background-color: powderblue;
+        background-color: powderblue;
     }
 input  
     {
-    background-color: lightgray;
+        background-color: lightgray;
     }
 #Male
     {
-    accent-color: Blue;
+        accent-color: Blue;
     }
 #Female
     {
@@ -16,9 +16,9 @@ input
     }
 textarea 
     {
-    background-color: lightgray;
+        background-color: lightgray;
     }
 select 
     {
-    background-color: lightgray;
+        background-color: lightgray;
     }
