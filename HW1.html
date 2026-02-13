@@ -36,6 +36,18 @@ HTML Colors in W3Schools is good reference for coloring the page
                         <label for = 'Male'> Male </label>
                         <input type = 'radio' id = 'Female' name = 'Gender' value = 'Female'>
                         <label for = 'Female'> Female </label><br><br>
+                        <!-- Weight -->
+                        <label for = 'weight'> Please enter your weight range.</label><br>
+                        <input type = 'radio' name = 'weight' id = 'less50'>
+                        <label for="less50"> Less than 50 </label><br>
+                        <input type ="radio" name = 'weight' id = '51-200'>
+                        <label for = '51-200'> 51 - 200 </label><br>
+                        <input type = 'radio' name = 'weight' id = '201-350'>
+                        <label for = "201-350"> 201 - 350 </label><br>
+                        <input type = "radio" name = 'weight' id = '351-500'>
+                        <label for = '351-500'> 351 - 500 </label><br>
+                        <input type = 'radio' name = 'weight' id = '500+'>
+                        <label for = "500+"> 500+ </label><br><br>
                         <!-- SSN -->
                         <label for = 'SSN'> Social Security Number: </label>
                         <input type = "password" maxlength = '11' id = 'SSN' required><br><br>
@@ -108,7 +120,10 @@ HTML Colors in W3Schools is good reference for coloring the page
                         <!-- Email Address -->
                         <label for = 'Email'> Email: </label>
                         <input type = 'email' id = 'Email' size = '25' maxlength = '50' title = 'Format As name@domain.tld'><br><br>
-                        <!-- Radio Button 2-->
+                        <!-- Range Slider -->
+                        <label for = 'pain'> Using this slider, what is your pain level? </label><br><br>
+                        <input type = 'range' id = 'pain' min = '1' max = '10'><br><br>
+                        <!-- Radio Button 3-->
                         <label> Do you / your family have a history of the following diseases? </label><br>
                         <input type = 'radio' name = 'history' id = 'heartDisease' required>
                         <label for = 'heartDisease'> Heart Disease </label><br>
