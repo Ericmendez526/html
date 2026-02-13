@@ -19,7 +19,7 @@ HTML Colors in W3Schools is good reference for coloring the page
         </head>
         <body>
                 <form action="/action_page.php">
-                        <h1 style = "color: blue;"> Medical Form </h1> 
+                        <h1> Houston General Patient Intake Form </h1> 
                         <!-- Date, Date Javascript is at bottom -->
                         <p>Today's Date: <span id="date"></span></p>
                         <!-- Full Name -->
@@ -31,7 +31,7 @@ HTML Colors in W3Schools is good reference for coloring the page
                         <label for = 'DOB'> Date Of Birth: </label> 
                         <input type = "text" maxlength = '10' id = 'DOB' placeholder = "MM/DD/YYYY" pattern="\d{2}/\d{2}/\d{4}" title ='Enter date as MM/DD/YYYY' required><br>
                         <!-- Gender -->
-                        <p> Please Enter Your Gender</p>
+                        <p> Please Select Your Gender</p>
                         <input type = 'radio' id = 'Male' name = 'Gender' value = 'Male' required>
                         <label for = 'Male'> Male </label>
                         <input type = 'radio' id = 'Female' name = 'Gender' value = 'Female'>
@@ -108,8 +108,22 @@ HTML Colors in W3Schools is good reference for coloring the page
                         <!-- Email Address -->
                         <label for = 'Email'> Email: </label>
                         <input type = 'email' id = 'Email' size = '25' maxlength = '50' title = 'Format As name@domain.tld'><br><br>
+                        <!-- Radio Button 2-->
+                        <label> Do you / your family have a history of the following diseases? </label><br>
+                        <input type = 'radio' name = 'history' id = 'heartDisease' required>
+                        <label for = 'heartDisease'> Heart Disease </label><br>
+                        <input type = 'radio' name = 'history' id = 'alzheimers'>
+                        <label for = 'alzheimers'> Alzheimer's Disease </label><br>
+                        <input type = 'radio' name = 'history' id = 'diabetes'>
+                        <label for = 'diabetes'> Diabetes </label><br>
+                        <input type = 'radio' name = 'history' id = 'parkinsons'>
+                        <label for = 'parkinsons'> Parkinson's Disease </label><br>
+                        <input type = 'radio' name = 'history' id = 'other'>
+                        <label for = 'other'> Other / More than one </label><br><br>
+                        <label> If you selected other, or have a history of more than one, please list the diseases here. </label><br>
+                        <input type = 'text' maxlength = '100' size = '50' id = 'otherTB'><br><br>
                         <!-- Text Box -->
-                        <label for = 'textblock'> Is there any Additional Information relevant to your visit? </label>
+                        <label for = 'textblock'> Is there any Additional Information relevant to your visit?</label>
                         <br><textarea name = 'textblock' rows = '3' cols = '50' required></textarea>
                         <!-- Submit Button and Clear Button -->
                         <br><br><input type = 'submit' value = 'Submit'> <div style = "float: right;"><input type = 'Reset' value = 'Clear and Start Over'></div>

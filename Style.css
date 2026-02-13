@@ -2,9 +2,29 @@ body
     {
         background-color: powderblue;
     }
+p
+    {
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+h1
+    {
+        color: blue;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: bold;
+    }
+label
+    {
+        font-weight: bold;
+        font-family: sans-serif;
+    }
 input  
     {
+        font-family: sans-serif;
         background-color: lightgray;
+        border-width: 2px;
+        border-color: black;
     }
 #Male
     {
@@ -16,9 +36,15 @@ input
     }
 textarea 
     {
+        font-family: sans-serif;
         background-color: lightgray;
+        border-width: 2px;
+        border-color: black;
     }
 select 
     {
+        font-family: sans-serif;
         background-color: lightgray;
+        border-width: 2px;
+        border-color: black;
     }
