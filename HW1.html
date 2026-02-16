@@ -50,12 +50,12 @@ HTML Colors in W3Schools is good reference for coloring the page
                         <label for = "500+"> 500+ </label><br><br>
                         <!-- SSN -->
                         <label for = 'SSN'> Social Security Number: </label>
-                        <input type = "password" maxlength = '11' id = 'SSN' required><br><br>
+                        <input type = "password" size = '10' maxlength = '11' id = 'SSN' required><br><br>
                         <!-- Address Lines 1 and 2 -->
                         <label for = 'AL1'> Address Line 1: </label>
-                        <input type = "text" maxlength = '30' id = 'AL1' required><br><br>
+                        <input type = "text" size = '35' maxlength = '30' id = 'AL1' required><br><br>
                         <label for = "AL2"> Address Line 2: </label>
-                        <input type = "text" maxlength = '30' id = 'AL2'><br><br>
+                        <input type = "text" size = '35' maxlength = '30' id = 'AL2'><br><br>
                         <!-- City -->
                         <label for = 'City'> City / State / Zip Code </label>
                         <input type = "text" size = '10' maxlength = '30' id = 'City' placeholder = "City" required>
@@ -137,6 +137,34 @@ HTML Colors in W3Schools is good reference for coloring the page
                         <label for = 'other'> Other / More than one </label><br><br>
                         <label> If you selected other, or have a history of more than one, please list the diseases here. </label><br>
                         <input type = 'text' maxlength = '100' size = '50' id = 'otherTB'><br><br>
+                        <!-- Checkbox -->
+                        <label> Which of the following diseases have you been vacinnated for (Check all that apply)</label><br>
+                        <input type = 'checkbox' id = 'polio' name = 'polio'>
+                        <label for = "polio"> Polio </label><br>
+                        <input type = 'checkbox' id = 'flu' name = 'flu'>
+                        <label for = "flu"> Flu</label><br>
+                        <input type = 'checkbox' id = 'meningitis' name = 'meningitis'>
+                        <label for= "meningitis"> Meningitis </label><br>
+                        <input type = 'checkbox' id = 'measles name = 'measles'>
+                        <label for = "measles"> Measles </label><br>
+                        <input type = 'checkbox' id = 'varicella' name = 'varicella'>
+                        <label for = "varicella"> Varicella </label><br>
+                        <input type = 'checkbox' id = 'hepatitis' name = 'hepatitis'>
+                        <label for = "hepatitis"> Hepatitis </label><br>
+                        <input type = 'checkbox' id = 'tetanus' name = 'tetanus'>
+                        <label for = "tetanus"> Tetanus</label><br>
+                        <input type = 'checkbox' id = 'rotavirus' name = 'rotavirus'>
+                        <label for = "rotavirus"> Rotavirus </label><br>
+                        <input type = 'checkbox' id = 'rubella' name = 'rubella'>
+                        <label for = "rubella"> Rubella </label><br>
+                        <input type = 'checkbox' id = 'otherVaccine' name = 'otherVaccine'>
+                        <label for = "otherVaccine"> Other </label><br>
+                        <input type = "checkbox" id = 'unknown' name = 'unknown'>
+                        <label for = "unknown" id = "unknown"> Unknown </label><br>
+                        <label for = "otherVacinneTB"> If you selected other, please list any relevant vaccinations. </label><br>
+                        <input type = "text" id = 'otherVaccineTB' size = '50'><br><br>
+                        <!-- Username and Password -->
+                         
                         <!-- Text Box -->
                         <label for = 'textblock'> Is there any Additional Information relevant to your visit?</label>
                         <br><textarea name = 'textblock' rows = '3' cols = '50' required></textarea>
