@@ -21,8 +21,8 @@ W3Schools HTML Image section will helop out with inputing images into the HTML F
                 <link rel="stylesheet" href="Style.css">
         </head>
         <body>
-                <img src="Images/doctorPicture.jpg" alt="Logo For Hospital" height = "150" width="250">
-                <form action="/action_page.php">
+                <img src="C:\Users\ericm_6nzt1rw\OneDrive\Desktop\Images\doctorPicture.jpg" alt="Logo For Hospital" height = "150" width="250">
+                <form action= 'thankyou.html'>
                                 <h1> Houston General Patient Intake Form </h1> 
                                 <!-- Date, Date Javascript is at bottom -->
                                 <p>Today's Date: <span id="date"></span></p>
@@ -235,10 +235,24 @@ W3Schools HTML Image section will helop out with inputing images into the HTML F
                                 <td><input type = 'submit' value = 'Submit'> <div style = "float: right;"><input type = 'Reset' value = 'Clear and Start Over'></div></td>
                                 </tr>
                                 <!-- Date JavaScript-->
+                        </table>
                                 <script>
                                         document.getElementById("date").innerHTML = new Date().toLocaleDateString();
                                 </script>
-                        </table>
                 </form>
+                                <!-- Footer -->
+                                        <div id="footer">
+                                                <img src = 'C:\Users\ericm_6nzt1rw\OneDrive\Desktop\Images\medicalPhoto.jpeg' alt = "pictureForFooter" height = "50" width = "50"><br>
+                                                <head><link rel="stylesheet" href="Style.css"></head>
+                                                        <table>
+                                                                <tr>
+                                                                        <label id = 'nameOfHospital'> Houston General </label>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td><label>For questions contact us at:</label></td>
+                                                                        <td><a href="mailto:houstongeneral@gmail.com">houstongeneral@gmail.com</a></td>
+                                                                </tr>
+                                                        </table>
+                                        </div>
         </body>
 </html>
