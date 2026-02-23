@@ -59,3 +59,15 @@ select
         border-width: 2px;
         border-color: black;
     }
+#footer
+    {
+        margin-top: 40px;
+    }
+#nameOfHospital
+    {
+        font-size: large;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: bold;
+        color: crimson;
+    }
