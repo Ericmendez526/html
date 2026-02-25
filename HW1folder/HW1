@@ -1,1 +1,258 @@
-
+<!DOCTYPE html>
+<!--
+Program name:
+Author: Eric Y Mendez
+Date: 2/02/2026
+Date last edited:
+Description: A Patient intake form for a hospital
+-->
+<!-- 
+Extra Help and References
+>Color
+Background color change CSS: style = "background-color: colorName ;"
+Light Blue for Background and Light Grey for the textboxes are a good cantrast 
+HTML Colors in W3Schools is good reference for coloring the page
+>CSS
+>Image
+W3Schools HTML Image section will helop out with inputing images into the HTML File
+-->
+<html lang ='en'>
+        <head>
+                <link rel="stylesheet" href="Style.css">
+        </head>
+        <body>
+                <img src="C:\Users\ericm_6nzt1rw\OneDrive\Desktop\Images\doctorPicture.jpg" alt="Logo For Hospital" height = "150" width="250">
+                <form action= 'thankyou.html'>
+                                <h1> Greatwood General Patient Intake Form </h1> 
+                                <!-- Date, Date Javascript is at bottom -->
+                                <p>Today's Date: <span id="date"></span></p>
+                        <table>
+                                <!-- Full Name -->
+                                <tr>
+                                <td><label for = 'FullName'> First Name / M.I / Last Name </label></td>
+                                        <td>
+                                <input type = "text" maxlength = '30' size = '10' id = 'FName' placeholder = "First Name" required>
+                                <input type = "text" maxlength = '1' size = '3' id = 'MI' placeholder = "M.I">
+                                <input type = "text" maxlength = '30' size = '10' id = 'LName' placeholder = "Last Name" required>
+                                        </td>
+                                </tr>
+                                <tr></tr>
+                                <!-- DOB -->
+                                <tr>
+                                <td><label for = 'DOB'> Date Of Birth: </label></td>
+                                <td><input type = "date" maxlength = '10' id = 'DOB' placeholder = "MM/DD/YYYY" title ='Enter date as MM/DD/YYYY' required></td>
+                                </tr>
+                                <!-- Gender -->
+                                <tr>
+                                <td><label> Please Select Your Gender</label></td>
+                                        <td><input type = 'radio' id = 'Male' name = 'Gender' value = 'Male' required>
+                                        <label for = 'Male'> Male </label>
+                                        <input type = 'radio' id = 'Female' name = 'Gender' value = 'Female'>
+                                        <label for = 'Female'> Female </label></td>
+                                </tr>
+                                <tr></tr>
+                                <!-- Weight -->
+                                <tr>
+                                <td><label for = 'weight'> Please enter your weight range.</label></td>
+                                <td><input type = 'radio' name = 'weight' id = 'less50'>
+                                <label for="less50"> Less than 50 </label>
+                                <input type ="radio" name = 'weight' id = '51-200'>
+                                <label for = '51-200'> 51 - 200 </label>
+                                <input type = 'radio' name = 'weight' id = '201-350'>
+                                <label for = "201-350"> 201 - 350 </label>
+                                <input type = "radio" name = 'weight' id = '351-500'>
+                                <label for = '351-500'> 351 - 500 </label>
+                                <input type = 'radio' name = 'weight' id = '500+'>
+                                <label for = "500+"> 500+ </label></td>
+                                </tr>
+                                <tr></tr>
+                                <!-- SSN -->
+                                <tr>
+                                <td><label for = 'SSN'> Social Security Number: </label></td>
+                                <td><input type = "password" size = '10' maxlength = '11' id = 'SSN' pattern="\d{3}-\d{2}-\d{4}" title = "Enter as XXX-XX-XXXX"></tr>
+                                </tr>
+                                <tr></tr>
+                                <!-- Address Lines 1 and 2 -->
+                                <tr>
+                                <td><label for = 'AL1'> Address Line 1: </label></td>
+                                <td><input type = "text" size = '35' maxlength = '30' id = 'AL1' required></td>
+                                </tr>
+                                <tr></tr>
+                                <tr>
+                                <td><label for = "AL2"> Address Line 2: </label></td>
+                                <td><input type = "text" size = '35' maxlength = '30' id = 'AL2'></td>
+                                </tr>
+                                <tr></tr>
+                                <!-- City -->
+                                <tr>
+                                <td><label for = 'City'> City / State / Zip Code </label></td>
+                                <td><input type = "text" size = '10' maxlength = '30' id = 'City' placeholder = "City" required>
+                                <!-- State -->
+                                <select id = 'state' required>
+                                        <option value ="">Select a State</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                        <option value="DE">Delaware</option>
+                                        <option value="DC">District Of Columbia</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="GA">Georgia</option>
+                                        <option value="HI">Hawaii</option>
+                                        <option value="ID">Idaho</option>
+                                        <option value="IL">Illinois</option>
+                                        <option value="IN">Indiana</option>
+                                        <option value="IA">Iowa</option>
+                                        <option value="KS">Kansas</option>
+                                        <option value="KY">Kentucky</option>
+                                        <option value="LA">Louisiana</option>
+                                        <option value="ME">Maine</option>
+                                        <option value="MD">Maryland</option>
+                                        <option value="MA">Massachusetts</option>
+                                        <option value="MI">Michigan</option>
+                                        <option value="MN">Minnesota</option>
+                                        <option value="MS">Mississippi</option>
+                                        <option value="MO">Missouri</option>
+                                        <option value="MT">Montana</option>
+                                        <option value="NE">Nebraska</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="NH">New Hampshire</option>
+                                        <option value="NJ">New Jersey</option>
+                                        <option value="NM">New Mexico</option>
+                                        <option value="NY">New York</option>
+                                        <option value="NC">North Carolina</option>
+                                        <option value="ND">North Dakota</option>
+                                        <option value="OH">Ohio</option>
+                                        <option value="OK">Oklahoma</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="PA">Pennsylvania</option>
+                                        <option value="PR">Puerto Rico</option>
+                                        <option value="RI">Rhode Island</option>
+                                        <option value="SC">South Carolina</option>
+                                        <option value="SD">South Dakota</option>
+                                        <option value="TN">Tennessee</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="UT">Utah</option>
+                                        <option value="VT">Vermont</option>
+                                        <option value="VA">Virginia</option>
+                                        <option value="WA">Washington</option>
+                                        <option value="WV">West Virginia</option>
+                                        <option value="WI">Wisconsin</option>
+                                        <option value="WY">Wyoming</option>
+                                </select>
+                                <!-- Zip Code -->
+                                <input type = 'text' size = '10' id = 'ZipCode' maxlength = '10' placeholder = 'Zip Code' required></td>
+                                </tr>
+                                <tr></tr>
+                                <!-- Email Address -->
+                                <tr>
+                                <td><label for = 'Email'> Email: </label></td>
+                                <td><input type = 'email' id = 'Email' size = '25' maxlength = '50' title = 'Format As name@domain.tld'></td>
+                                </tr>
+                                <tr></tr>
+                                <!-- Pain Slider -->
+                                <tr>
+                                <td><label for = 'pain'> Using this slider, what is your pain level? </label></td>
+                                <td>1 <input type = 'range' id = 'pain' min = '1' max = '10'> 10 </td>
+                                </tr>
+                                <tr></tr>
+                                <!-- History -->
+                                <tr>
+                                <td><label> Do you / your family have a history of the following diseases? </label></td>
+                                <td><input type = 'radio' name = 'history' id = 'heartDisease' required>
+                                <label for = 'heartDisease'> Heart Disease </label>
+                                <input type = 'radio' name = 'history' id = 'alzheimers'>
+                                <label for = 'alzheimers'> Alzheimer's Disease </label>
+                                <input type = 'radio' name = 'history' id = 'diabetes'>
+                                <label for = 'diabetes'> Diabetes </label>
+                                <input type = 'radio' name = 'history' id = 'parkinsons'>
+                                <label for = 'parkinsons'> Parkinson's Disease </label>
+                                <input type = 'radio' name = 'history' id = 'other'>
+                                <label for = 'other'> Other / More than one </label></td>
+                                </tr>
+                                <tr>
+                                <td><label> If you selected other, or have a history of more than one, please list the diseases here. </label></td>
+                                <td><input type = 'text' maxlength = '100' size = '50' id = 'otherTB'></td>
+                                </tr>
+                                <tr></tr>
+                                <!-- Checkbox -->
+                                <tr>
+                                <td><label> Which of the following diseases have you been vacinnated for (Check all that apply)</label></td>
+                                <td><input type = 'checkbox' id = 'polio' name = 'polio'>
+                                <label for = "polio"> Polio </label>
+                                <input type = 'checkbox' id = 'flu' name = 'flu'>
+                                <label for = "flu"> Flu</label>
+                                <input type = 'checkbox' id = 'meningitis' name = 'meningitis'>
+                                <label for= "meningitis"> Meningitis </label>
+                                <input type = 'checkbox' id = 'measles' name = 'measles'>
+                                <label for = "measles"> Measles </label>
+                                <input type = 'checkbox' id = 'varicella' name = 'varicella'>
+                                <label for = "varicella"> Varicella </label>
+                                <input type = 'checkbox' id = 'hepatitis' name = 'hepatitis'>
+                                <label for = "hepatitis"> Hepatitis </label>
+                                <input type = 'checkbox' id = 'tetanus' name = 'tetanus'>
+                                <label for = "tetanus"> Tetanus</label>
+                                <input type = 'checkbox' id = 'rotavirus' name = 'rotavirus'>
+                                <label for = "rotavirus"> Rotavirus </label>
+                                <input type = 'checkbox' id = 'rubella' name = 'rubella'>
+                                <label for = "rubella"> Rubella </label>
+                                <input type = 'checkbox' id = 'otherVaccine' name = 'otherVaccine'>
+                                <label for = "otherVaccine"> Other </label>
+                                <input type = "checkbox" id = 'unknown' name = 'unknown'>
+                                <label for = "unknown" id = "unknown"> Unknown </label></td>
+                                </tr>
+                                <tr>
+                                <td><label for = "otherVacinneTB"> If you selected other, please list any relevant vaccinations. </label></td>
+                                <td><input type = "text" id = 'otherVaccineTB' size = '50'></td>
+                                </tr>
+                                <tr></tr>
+                                <!-- Text Box -->
+                                <tr>
+                                <td><label for = 'textblock'> Is there any Additional Information relevant to your visit?</label></td>
+                                <td><textarea name = 'textblock' rows = '3' cols = '50' required></textarea></td>
+                                </tr>
+                                <!-- Username and Password -->
+                                <tr>
+                                <td><label> Please Create an Account. </label></td>
+                                </tr>
+                                <td><label for = "userID"> Username: </label></td>
+                                <td><input type = "text" id = "userID" maxlength = "20" required></td>
+                                </tr>
+                                <tr>
+                                <td><label for = "userID"> Password: </label></td>
+                                <td><input type = "password" id = "password" maxlength = "30" required></td>
+                                </tr>
+                                <tr>
+                                <td><label for = "userID"> Confirm Password: </label></td>
+                                <td><input type = "password" id = "passwordConfirm" maxlength = "30" required></td>
+                                </tr>
+                                <tr></tr>
+                                <!-- Submit Button and Clear Button -->
+                                <tr>
+                                <td><input type = 'submit' value = 'Submit'> <div style = "float: right;"><input type = 'Reset' value = 'Clear and Start Over'></div></td>
+                                </tr>
+                                <!-- Date JavaScript-->
+                        </table>
+                                <script>
+                                        document.getElementById("date").innerHTML = new Date().toLocaleDateString();
+                                </script>
+                </form>
+                                <!-- Footer -->
+                                        <div>
+                                                <img src = 'C:\Users\ericm_6nzt1rw\OneDrive\Desktop\Images\medicalPhoto.jpeg' alt = "pictureForFooter" height = "50" width = "50"><br>
+                                                <head><link rel="stylesheet" href="Style.css"></head>
+                                                        <table>
+                                                                <tr>
+                                                                        <label id = 'nameOfHospital'> Greatwood General </label>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td><label>For questions contact us at:</label></td>
+                                                                        <td><a href="mailto:greatwoodgeneral@gmail.com">greatwoodgeneral@gmail.com</a></td>
+                                                                </tr>
+                                                        </table>
+                                        </div>
+        </body>
+</html>
