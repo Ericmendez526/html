@@ -1,1 +1,74 @@
+/*
+Program name:
+Author: Eric Y Mendez
+Date: 2/02/2026
+Date last edited:
+Description: A Patient intake form for a hospital
+*/
+body 
+    {
+        background-color: powderblue;
+    }
+p
+    {
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+h1
+    {
+        color: crimson;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: bold;
+    }
+label
+    {
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+    #unknown
+            {
+                color:red;
+            }
+input  
+    {
+        font-family: sans-serif;
+        background-color: lightgray;
+        border-width: 2px;
+        border-color: black;
+    }
+#Male
+    {
+        accent-color: Blue;
+    }
+#Female
+    {
+        accent-color: DeepPink;
+    }
+textarea 
+    {
+        font-family: sans-serif;
+        background-color: lightgray;
+        border-width: 2px;
+        border-color: black;
+    }
+select 
+    {
+        font-family: sans-serif;
+        background-color: lightgray;
+        border-width: 2px;
+        border-color: black;
+    }
+#footer
+    {
+        margin-top: 600px;
+    }
+#nameOfHospital
+    {
+        font-size: large;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: bold;
+        color: crimson;
+    }
 
