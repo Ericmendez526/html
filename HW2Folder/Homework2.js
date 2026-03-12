@@ -36,6 +36,26 @@ function validateFname()
         }
 }
 
+//Middle Initial Validation Function
+function validateMI()
+{
+    let MI = document.getElementById("MI").value.trim();
+    var MIpattern = /^[a-zA-Z]$/;
+        if(MI != "")
+        {
+            if (!MI.match(MIpattern))
+            {
+                document.getElementById("MI-error").innerHTML = "Please enter a valid Middle Initial";
+                return false;
+            }
+            else
+            {
+                document.getElementById("MI-error").innerHTML = ""; 
+                return true;
+            }
+        }
+}
+
 //Last Name Validation Function
 function validateLname()
 {
