@@ -93,3 +93,31 @@ function validateLname()
                     }
         }
 }
+//DOB Validation 
+function validateDOB()
+{
+    let DOB = document.getElementById("DOB")
+    let date = new Date().setFullYear(DOB.value)
+    let maxDate = new Date().setFullYear(new Date().getFullYear() - 120);
+
+    if(date > new Date())
+    {
+        document.getElementById("DOB-error").innerHTML= 
+        "Date cannot be in the future.";
+        DOB.value="";
+        return false;
+    }
+    else   
+        if(date < new Date(maxDate))
+        {
+            document.getElementById("DOB-Error").innerHTML=
+            "Date cannot be more than 120 years ago";
+            DOB.value = "";
+            return false;
+        }
+        else
+        {
+            document.getElementById("DOB-error").innerHTML= "";
+            return true;
+        }
+}

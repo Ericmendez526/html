@@ -46,7 +46,8 @@ Description: A Patient intake form for a hospital
                                 <!-- DOB -->
                                 <tr>
                                 <td><label for = 'DOB'> Date Of Birth: </label></td>
-                                <td><input type = "date" maxlength = '10' id = 'DOB' placeholder = "MM/DD/YYYY" title ='Enter date as MM/DD/YYYY' required></td>
+                                <td><input type = "date" maxlength = '10' id = 'DOB' placeholder = "MM/DD/YYYY" onblur = "validateDOB()" required>
+                                <span class="error" id = "DOB-error"></span></td>
                                 </tr>
                                 <!-- Gender -->
                                 <tr>
