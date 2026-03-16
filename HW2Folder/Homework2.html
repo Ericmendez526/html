@@ -22,13 +22,24 @@ Description: A Patient intake form for a hospital
                                 <tr>
                                 <td><label for = 'FullName'> First Name / M.I / Last Name </label></td>
                                         <td>
-                                <input type = "text" minlength = '1' maxlength = '30' size = '10' id = 'Fname' Title = "Letters, dashes, and apostrophes only in First Name" pattern = "[a-zA-Z'-]{1-30}" onblur = "validateFname()" required>
-                                <input type = "text" minlength = "1" maxlength = '1' size = '3' id = 'MI' title = "One letter only in Middle Initial" pattern = "[a-zA-Z]{1}" onblur = "validateMI()">
-                                <input type = "text" minlength = "1" maxlength = '30' size = '10' id = 'Lname' title= "Letters, dashes, and apostrophes only in Last Name" pattern = "[a-zA-Z'-]{1-30}" onblur = "validateLname()" required>
-                                        <br>
-                                        <span class = 'error' id = "fname-error"></span>
-                                        <span class = 'error' id = "MI-error"></span>
-                                        <span class = 'error' id = "Lname-error"></span>
+                                <div class = "name-field">
+                                <input type = "text" minlength = '1' maxlength = '30' size = '10' id = 'Fname' 
+                                Title = "Letters, dashes, and apostrophes only in First Name" 
+                                pattern = "[a-zA-Z'-]{1-30}" onblur = "validateFname()" required>
+                                <span class = 'error' id = "fname-error"></span>
+                                </div>
+                                <div class = "name-field">
+                                <input type = "text" minlength = "1" maxlength = '1' size = '3' id = 'MI' 
+                                title = "One letter only in Middle Initial" 
+                                pattern = "[a-zA-Z]{1}" onblur = "validateMI()">
+                                <span class = 'error' id = "MI-error"></span>
+                                </div>
+                                <div class = "name-field">
+                                <input type = "text" minlength = "1" maxlength = '30' size = '10' id = 'Lname' 
+                                title = "Letters, dashes, and apostrophes only in Last Name" 
+                                pattern = "[a-zA-Z'-]{1-30}" onblur = "validateLname()" required>
+                                <span class = 'error' id = "Lname-error"></span>
+                                </div>
                                         </td>
                                 </tr>
                                 <tr></tr>
