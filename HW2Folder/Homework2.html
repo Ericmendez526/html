@@ -76,13 +76,15 @@ Description: A Patient intake form for a hospital
                                 <!-- SSN -->
                                 <tr>
                                 <td><label for = 'SSN'> Social Security Number: </label></td>
-                                <td><input type = "password" size = '10' maxlength = '11' id = 'SSN' pattern="\d{3}-\d{2}-\d{4}" title = "Enter as XXX-XX-XXXX" required></tr>
+                                <td><input type = "password" size = '10' maxlength = '11' id = 'SSN' pattern="\d{3}-\d{2}-\d{4}" title = "Numbers Only" onblur = "validateSSN()" required>
+                                <span class = "error" id = "SSN-error"></span></td>
                                 </tr>
                                 <tr></tr>
                                 <!-- Address Lines 1 and 2 -->
                                 <tr>
                                 <td><label for = 'AL1'> Address Line 1: </label></td>
-                                <td><input type = "text" size = '35' maxlength = '30' id = 'AL1' required></td>
+                                <td><input type = "text" size = '35' maxlength = '30' id = 'AL1' title = "Letters, dashes and apostophes only" required onblur = "validateAL1()">
+                                <span class = "error" id = "AL1-error"></span></td>
                                 </tr>
                                 <tr></tr>
                                 <tr>
