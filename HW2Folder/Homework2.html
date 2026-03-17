@@ -94,10 +94,14 @@ Description: A Patient intake form for a hospital
                                 <tr></tr>
                                 <!-- City -->
                                 <tr>
-                                <td><label for = 'City'> City / State / Zip Code </label></td>
-                                <td><input type = "text" size = '10' maxlength = '30' id = 'City' placeholder = "City" required>
-                                <!-- State -->
-                                <select id = 'state' required>
+                                <td><label>City / State / Zip Code</label></td>
+                                <td>
+                                <div class="CSZ-container">
+                                <div class="CSZ-field">
+                                <input type="text" size="10" maxlength="30" id="City" placeholder="City" onblur="validateCity()">
+                                <span class="error" id="City-error"></span>
+                                </div>
+                                <select id="state" required>
                                         <option value ="">Select a State</option>
                                         <option value="AL">Alabama</option>
                                         <option value="AK">Alaska</option>
@@ -152,8 +156,12 @@ Description: A Patient intake form for a hospital
                                         <option value="WI">Wisconsin</option>
                                         <option value="WY">Wyoming</option>
                                 </select>
-                                <!-- Zip Code -->
-                                <input type = 'text' size = '10' id = 'ZipCode' maxlength = '10' placeholder = 'Zip Code' required></td>
+                                <div class="CSZ-field">
+                                <input type="text" size="10" id="ZipCode" maxlength="10" placeholder="Zip Code" onblur="validateZipCode()" required>
+                                <span class="error" id="ZipCode-error"></span>
+                                </div>
+                                </div>
+                                </td>
                                 </tr>
                                 <tr></tr>
                                 <!-- Email Address -->

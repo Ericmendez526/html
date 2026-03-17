@@ -86,3 +86,16 @@ select
         margin-top: 3px;
     }
 
+.CSZ-container
+{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.CSZ-field
+{
+    display: flex;
+    flex-direction: column;
+}
+
