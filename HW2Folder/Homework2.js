@@ -97,7 +97,7 @@ function validateLname()
 function validateDOB()
 {
     let DOB = document.getElementById("DOB")
-    let date = new Date().setFullYear(DOB.value)
+    let date = new Date(DOB.value)
     let maxDate = new Date().setFullYear(new Date().getFullYear() - 120);
 
     if(date > new Date())
