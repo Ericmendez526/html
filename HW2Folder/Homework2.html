@@ -167,7 +167,9 @@ Description: A Patient intake form for a hospital
                                 <!-- Email Address -->
                                 <tr>
                                 <td><label for = 'Email'> Email: </label></td>
-                                <td><input type = 'email' id = 'Email' size = '25' maxlength = '50' title = 'Format As name@domain.tld' required></td>
+                                <td><input type = 'email' id = 'Email' size = '25' maxlength = '50' title = 'Format As name@domain.tld' 
+                                pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,20}$" onblur="validateEmail()">
+                                <span class = "error" id = "Email-error"></span></td>
                                 </tr>
                                 <tr></tr>
                                 <!-- Pain Slider -->
@@ -236,20 +238,36 @@ Description: A Patient intake form for a hospital
                                 <td><label> Please Create an Account. </label></td>
                                 </tr>
                                 <td><label for = "userID"> Username: </label></td>
-                                <td><input type = "text" id = "userID" maxlength = "20" required></td>
+                                <td><input type = "text" id = "userID" maxlength = "20" 
+                                title = "Username must contain at least five letters and cannot begin with a number" onblur="validateUsername()">
+                                <span class = "error" id = "Username-error"></span></td>
                                 </tr>
                                 <tr>
                                 <td><label for = "userID"> Password: </label></td>
-                                <td><input type = "password" id = "password" maxlength = "30" required></td>
+                                <td><input type = "password" id = "password" maxlength = "30" 
+                                title = "Password must cointin at least 10 characters, one uppercase letter, one number, one lowercase letter and one special character"
+                                onblur="validatePass()"
+                                oninput="validatePass()"
+                                onfocus="validatePass()"
+                                required>
+                                <span class = "error" id="Password-error"></span></td>
                                 </tr>
                                 <tr>
                                 <td><label for = "userID"> Confirm Password: </label></td>
-                                <td><input type = "password" id = "passwordConfirm" maxlength = "30" required></td>
+                                <td><input type = "password" id = "passwordConfirm" maxlength = "30" 
+                                title = "Please Re-enter your password" 
+                                onblur="confirmPass()"
+                                oninput="confirmPass()"
+                                onfocus="confrimPass()"
+                                required>
+                                <span class = "error" id = cPass-error></span></td>
                                 </tr>
                                 <tr></tr>
-                                <!-- Submit Button and Clear Button -->
+                                <!-- Submit Button, Clear Button and Review Button -->
                                 <tr>
-                                <td><input type = 'submit' value = 'Submit'> <div style = "float: right;"><input type = 'Reset' value = 'Clear and Start Over'></div></td>
+                                <td><input type = 'submit' value = 'Submit'> 
+                                <div style = "float: right;"><input type = 'Reset' value = 'Clear and Start Over'></div>
+                                <input type="button" name = "review" value = "Review" style = "font-family: sans-serif;" onclick="reviewInput()"></td>
                                 </tr>
                                 <!-- Date JavaScript-->
                         </table>
