@@ -196,14 +196,14 @@ function validateZipCode()
         }
 
         zipInput.value = ZipCode;
-        document.getElementById("ZipCode-error")/innerHTML = "";
+        document.getElementById("ZipCode-error").innerHTML = "";
         return true;
 }
 
 //Email Validation
-function validateEmail
+function validateEmail()
 {
-    let email = document.getElementById("Email");
+    let email = document.getElementById("Email").value;
     var emailR = /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/;
     
     if(email == "")
@@ -215,13 +215,13 @@ function validateEmail
     else
         if(!email.match(emailR))
         {
-            document.getElementById("Email-error")=
+            document.getElementById("Email-error").innerHTML=
             "Please enter a valid email address.";
             return false;
         }   
         else
         {
-            docuemtn.getElementById("Email-error") = "";
+            document.getElementById("Email-error").innerHTML = "";
             return true;
         }
 }
