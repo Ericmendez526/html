@@ -225,3 +225,161 @@ function validateEmail()
             return true;
         }
 }
+
+//Username Validation 
+function validateUsername()
+{
+    let Username = document.getElementById("Username").value;
+    Username = Username.toLowerCase();
+    document.getElementById("Username").value = Username;
+
+    if(Username.length === 0)
+    {
+        document.getElementById("Username-error").innerHTML = 
+        "Username Field cannot be empty";
+        return false;
+    }
+        if(!isNaN(Username.charAt(0)))
+        {
+            document.getElementById("Username-error").innerHTML = 
+            "Username cannot begin with a number";
+            return false;
+        }
+            let regex = /^[a-zA-Z0-9_]+$/;
+            if(!regex.test(Username))
+            {
+                document.getElementById("Username-error").innerHTML = 
+                "Username can only contain letters, numbers, or underscores";
+                return false;
+            }
+            else
+                if(Username.length < 5)
+                {
+                    document.getElementById("Username-error").innerHTML = 
+                    "Username cannot be less than 5 characters";
+                    return false;
+                }
+                else 
+                    if(Username.length > 30)
+                    {
+                    document.getElementById("Username-error").innerHTML = 
+                    "Username cannot exceed 30 characters";   
+                    return false;                     
+                    }
+                    else
+                        {
+                            document.getElementById("Username-error").innerHTML = "";
+                            return true;
+                        }
+}
+
+//Password Validations
+function validatePass()
+{
+    const Password = document.getElementById("Password").value;
+    const Username = document.getElementById("Username").value;
+
+    const errorMessage = [];
+
+    if(!Password.match(/[a-z]/))
+    {
+        errorMessage.push("Enter at least one lowercase letter");
+    }
+    if(!Password.match(/[A-Z]/))
+    {
+        errorMessage.push("Enter at least one uppercase letter");
+    }
+    if(!Password.match(/[0-9]/))
+    {
+        errorMessage.push("Enter at least one number");
+    }
+    if(!Password.match(/[!@#$%&*-_\.+()]/))
+    {
+        errorMessage.push("Enter at least one special character");
+    }
+    if((Password == Username) || Password.includes(Username))
+    {
+        errorMessage.push("Password cannot contain username")
+    }
+
+    const errorContainer = document.querySelector(".pass-message");
+    errorContainer.innerHTML = errorMessage
+    .map(msg => `<span>${msg}</span><br>`)
+    .join("");
+}
+
+//Confirm Password Validation
+function confirmPass()
+{
+    Password = document.getElementById("Password").value;
+    passwordConfirm = document.getElementById("passwordConfirm").value;
+
+    if(Password !== passwordConfirm)
+    {
+        document.getElementById("cPass-error").innerHTML =
+        "Passwords do not match";
+        return false;
+    }
+    else
+    {
+        document.getElementById("cPass-error").innerHTML =
+        "Password Match";
+        return true;
+    }
+
+}
+
+//Review Button Code
+function reviewInput() {
+    var formcontent = document.getElementById("signup");
+    var formoutput = "<table class='output'><tr><th colspan='2'>Review Your Information:</th></tr>";
+
+    for (var i = 0; i < formcontent.elements.length; i++) {
+        var el = formcontent.elements[i];
+        var datatype = el.type;
+        var name = el.name;
+        var value = el.value;
+
+        // skip elements with no name
+        if (!name) continue;
+
+        switch (datatype) {
+            case "checkbox":
+                if (el.checked) {
+                    formoutput += "<tr><td align='right'>" + name + "</td>";
+                    formoutput += "<td class='outputdata'>&#x2713;</td></tr>";
+                }
+                break;
+
+            case "radio":
+                if (el.checked) {
+                    formoutput += "<tr><td align='right'>" + name + "</td>";
+                    formoutput += "<td class='outputdata'>" + value + "</td></tr>";
+                }
+                break;
+
+            case "range":
+                // Only show the slider if the user moved it off the default (0)
+                if (value !== "0") {
+                    formoutput += "<tr><td align='right'>" + name + "</td>";
+                    formoutput += "<td class='outputdata'>" + value + "</td></tr>";
+                }
+                break;
+
+            case "button":
+            case "submit":
+            case "reset":
+                // skip
+                break;
+
+            default:
+                if (value !== "") {
+                    formoutput += "<tr><td align='right'>" + name + "</td>";
+                    formoutput += "<td class='outputdata'>" + value + "</td></tr>";
+                }
+        }
+    }
+
+    formoutput += "</table>";
+    document.getElementById("showInput").innerHTML = formoutput;
+}
