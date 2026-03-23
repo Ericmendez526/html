@@ -383,3 +383,8 @@ function reviewInput() {
     formoutput += "</table>";
     document.getElementById("showInput").innerHTML = formoutput;
 }
+
+function rangeSliderLive(val)
+{
+    document.getElementById("painValue").innerText = val;
+}

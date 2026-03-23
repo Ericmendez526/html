@@ -174,7 +174,8 @@ Description: A Patient intake form for a hospital
                                 <!-- Pain Slider -->
                                 <tr>
                                 <td><label for = 'pain'> Using this slider, what is your pain level? </label></td>
-                                <td>1 <input type = 'range' id = 'pain' min = '1' max = '10' required> 10 </td>
+                                <td><input type = 'range' id = 'pain' min = '1' max = '10' oninput = "rangeSliderLive(this.value)"> 
+                                <span id = "painValue"> 5 </span></td>
                                 </tr>
                                 <tr></tr>
                                 <!-- History -->
