@@ -23,19 +23,19 @@ Description: A Patient intake form for a hospital
                                 <td><label for = 'FullName'> First Name / M.I / Last Name </label></td>
                                         <td>
                                 <div class = "name-field">
-                                <input type = "text" minlength = '1' maxlength = '30' size = '10' id = 'Fname' 
+                                <input type = "text" minlength = '1' maxlength = '30' size = '10' id = 'Fname' name = "First Name" 
                                 Title = "Letters, dashes, and apostrophes only in First Name" 
                                 pattern = "[a-zA-Z'-]{1-30}" onblur = "validateFname()" required>
                                 <span class = 'error' id = "fname-error"></span>
                                 </div>
                                 <div class = "name-field">
-                                <input type = "text" minlength = "1" maxlength = '1' size = '3' id = 'MI' 
+                                <input type = "text" minlength = "1" maxlength = '1' size = '3' id = 'MI' name = "Middle Initial" 
                                 title = "One letter only in Middle Initial" 
                                 pattern = "[a-zA-Z]{1}" onblur = "validateMI()">
                                 <span class = 'error' id = "MI-error"></span>
                                 </div>
                                 <div class = "name-field">
-                                <input type = "text" minlength = "1" maxlength = '30' size = '10' id = 'Lname' 
+                                <input type = "text" minlength = "1" maxlength = '30' size = '10' id = 'Lname' name = "Last Name"
                                 title = "Letters, dashes, and apostrophes only in Last Name" 
                                 pattern = "[a-zA-Z'-]{1-30}" onblur = "validateLname()" required>
                                 <span class = 'error' id = "Lname-error"></span>
@@ -46,7 +46,7 @@ Description: A Patient intake form for a hospital
                                 <!-- DOB -->
                                 <tr>
                                 <td><label for = 'DOB'> Date Of Birth: </label></td>
-                                <td><input type = "date" maxlength = '10' id = 'DOB' placeholder = "MM/DD/YYYY" onblur = "validateDOB()" required>
+                                <td><input type = "date" maxlength = '10' id = 'DOB' name = "Date Of Birth" placeholder = "MM/DD/YYYY" onblur = "validateDOB()" required>
                                 <span class="error" id = "DOB-error"></span></td>
                                 </tr>
                                 <!-- Gender -->
@@ -60,36 +60,37 @@ Description: A Patient intake form for a hospital
                                 <tr></tr>
                                 <!-- Weight -->
                                 <tr>
-                                <td><label for = 'weight'> Please enter your weight range.</label></td>
-                                <td><input type = 'radio' name = 'weight' id = 'less50' required>
+                                <td><label for='weight'> Please enter your weight range.</label></td>
+                                <td>
+                                <input type='radio' name='Weight' id='less50' value='Less than 50' required>
                                 <label for="less50"> Less than 50 </label>
-                                <input type ="radio" name = 'weight' id = '51-200'>
-                                <label for = '51-200'> 51 - 200 </label>
-                                <input type = 'radio' name = 'weight' id = '201-350'>
-                                <label for = "201-350"> 201 - 350 </label>
-                                <input type = "radio" name = 'weight' id = '351-500'>
-                                <label for = '351-500'> 351 - 500 </label>
-                                <input type = 'radio' name = 'weight' id = '500+'>
-                                <label for = "500+"> 500+ </label></td>
+                                <input type='radio' name='Weight' id='51-200' value='51 - 200'>
+                                <label for='51-200'> 51 - 200 </label>
+                                <input type='radio' name='Weight' id='201-350' value='201 - 350'>
+                                <label for="201-350"> 201 - 350 </label>
+                                <input type='radio' name='Weight' id='351-500' value='351 - 500'>
+                                <label for='351-500'> 351 - 500 </label>
+                                <input type='radio' name='Weight' id='500plus' value='500+'>
+                                <label for="500plus"> 500+ </label>
+                                </td>
                                 </tr>
-                                <tr></tr>
                                 <!-- SSN -->
                                 <tr>
                                 <td><label for = 'SSN'> Social Security Number: </label></td>
-                                <td><input type = "password" size = '10' maxlength = '11' id = 'SSN' title = "Numbers Only" onblur = "validateSSN()" required>
+                                <td><input type = "password" size = '10' maxlength = '11' id = 'SSN' name = "Social Security Number" title = "Numbers Only" onblur = "validateSSN()" required>
                                 <span class = "error" id = "SSN-error"></span></td>
                                 </tr>
                                 <tr></tr>
                                 <!-- Address Lines 1 and 2 -->
                                 <tr>
                                 <td><label for = 'AL1'> Address Line 1: </label></td>
-                                <td><input type = "text" size = '35' maxlength = '30' id = 'AL1' title = "Letters, dashes and apostophes only" required onblur = "validateAL1()">
+                                <td><input type = "text" size = '35' maxlength = '30' id = 'AL1' name = "Address Line 1" title = "Letters, dashes and apostophes only" required onblur = "validateAL1()">
                                 <span class = "error" id = "AL1-error"></span></td>
                                 </tr>
                                 <tr></tr>
                                 <tr>
                                 <td><label for = "AL2"> Address Line 2: </label></td>
-                                <td><input type = "text" size = '35' maxlength = '30' id = 'AL2'></td>
+                                <td><input type = "text" size = '35' maxlength = '30' id = 'AL2' name = "Address Line 2"></td>
                                 </tr>
                                 <tr></tr>
                                 <!-- City -->
@@ -101,7 +102,7 @@ Description: A Patient intake form for a hospital
                                 <input type="text" size="10" maxlength="30" id="City" placeholder="City" onblur="validateCity()">
                                 <span class="error" id="City-error"></span>
                                 </div>
-                                <select id="state" required>
+                                <select id="state" name = "State" required>
                                         <option value ="">Select a State</option>
                                         <option value="AL">Alabama</option>
                                         <option value="AK">Alaska</option>
@@ -157,7 +158,7 @@ Description: A Patient intake form for a hospital
                                         <option value="WY">Wyoming</option>
                                 </select>
                                 <div class="CSZ-field">
-                                <input type="text" size="10" id="ZipCode" maxlength="10" placeholder="Zip Code" onblur="validateZipCode()" required>
+                                <input type="text" size="10" id="ZipCode" name = "Zip Code" maxlength="10" placeholder="Zip Code" onblur="validateZipCode()" required>
                                 <span class="error" id="ZipCode-error"></span>
                                 </div>
                                 </div>
@@ -167,34 +168,34 @@ Description: A Patient intake form for a hospital
                                 <!-- Email Address -->
                                 <tr>
                                 <td><label for = 'Email'> Email: </label></td>
-                                <td><input type = 'email' id = 'Email' size = '25' maxlength = '50' onblur="validateEmail()">
+                                <td><input type = 'email' id = 'Email' name = "Email" size = '25' maxlength = '50' onblur="validateEmail()">
                                 <span class = "error" id = "Email-error"></span></td>
                                 </tr>
                                 <tr></tr>
                                 <!-- Pain Slider -->
                                 <tr>
                                 <td><label for = 'pain'> Using this slider, what is your pain level? </label></td>
-                                <td><input type = 'range' id = 'pain' min = '1' max = '10' oninput = "rangeSliderLive(this.value)"> 
+                                <td><input type = 'range' id = 'pain' name = "Range Slider" min = '1' max = '10' oninput = "rangeSliderLive(this.value)"> 
                                 <span id = "painValue"> 5 </span></td>
                                 </tr>
                                 <tr></tr>
                                 <!-- History -->
                                 <tr>
                                 <td><label> Do you / your family have a history of the following diseases? </label></td>
-                                <td><input type = 'radio' name = 'history' id = 'heartDisease' required>
+                                <td><input type = 'radio' name = 'History' id = 'heartDisease' required>
                                 <label for = 'heartDisease'> Heart Disease </label>
-                                <input type = 'radio' name = 'history' id = 'alzheimers'>
+                                <input type = 'radio' name = 'History' id = 'alzheimers' value = 'Alzheimers'>
                                 <label for = 'alzheimers'> Alzheimer's Disease </label>
-                                <input type = 'radio' name = 'history' id = 'diabetes'>
+                                <input type = 'radio' name = 'History' id = 'diabetes' value = 'Diabetes'>
                                 <label for = 'diabetes'> Diabetes </label>
-                                <input type = 'radio' name = 'history' id = 'parkinsons'>
+                                <input type = 'radio' name = 'History' id = 'parkinsons' value = 'Parkinsons'>
                                 <label for = 'parkinsons'> Parkinson's Disease </label>
-                                <input type = 'radio' name = 'history' id = 'other'>
+                                <input type = 'radio' name = 'History' id = 'other' value = 'Other / More than one'>
                                 <label for = 'other'> Other / More than one </label></td>
                                 </tr>
                                 <tr>
                                 <td><label> If you selected other, or have a history of more than one, please list the diseases here. </label></td>
-                                <td><input type = 'text' maxlength = '100' size = '50' id = 'otherTB'></td>
+                                <td><input type = 'text' maxlength = '100' size = '50' id = 'otherTB' name = "Other diseases"></td>
                                 </tr>
                                 <tr></tr>
                                 <!-- Checkbox -->
@@ -202,21 +203,21 @@ Description: A Patient intake form for a hospital
                                 <td><label> Which of the following diseases have you been vacinnated for (Check all that apply)</label></td>
                                 <td><input type = 'checkbox' id = 'polio' name = 'polio'>
                                 <label for = "polio"> Polio </label>
-                                <input type = 'checkbox' id = 'flu' name = 'flu'>
+                                <input type = 'checkbox' id = 'flu' name = 'Flu'>
                                 <label for = "flu"> Flu</label>
-                                <input type = 'checkbox' id = 'meningitis' name = 'meningitis'>
+                                <input type = 'checkbox' id = 'meningitis' name = 'Meningitis'>
                                 <label for= "meningitis"> Meningitis </label>
-                                <input type = 'checkbox' id = 'measles' name = 'measles'>
+                                <input type = 'checkbox' id = 'measles' name = 'Measles'>
                                 <label for = "measles"> Measles </label>
-                                <input type = 'checkbox' id = 'varicella' name = 'varicella'>
+                                <input type = 'checkbox' id = 'varicella' name = 'Varicella'>
                                 <label for = "varicella"> Varicella </label>
-                                <input type = 'checkbox' id = 'hepatitis' name = 'hepatitis'>
+                                <input type = 'checkbox' id = 'hepatitis' name = 'Hepatitis'>
                                 <label for = "hepatitis"> Hepatitis </label>
-                                <input type = 'checkbox' id = 'tetanus' name = 'tetanus'>
+                                <input type = 'checkbox' id = 'tetanus' name = 'Tetanus'>
                                 <label for = "tetanus"> Tetanus</label>
-                                <input type = 'checkbox' id = 'rotavirus' name = 'rotavirus'>
+                                <input type = 'checkbox' id = 'rotavirus' name = 'Rotavirus'>
                                 <label for = "rotavirus"> Rotavirus </label>
-                                <input type = 'checkbox' id = 'rubella' name = 'rubella'>
+                                <input type = 'checkbox' id = 'rubella' name = 'Rubella'>
                                 <label for = "rubella"> Rubella </label>
                                 <input type = 'checkbox' id = 'otherVaccine' name = 'otherVaccine'>
                                 <label for = "otherVaccine"> Other </label>
@@ -225,7 +226,7 @@ Description: A Patient intake form for a hospital
                                 </tr>
                                 <tr>
                                 <td><label for = "otherVacinneTB"> If you selected other, please list any relevant vaccinations. </label></td>
-                                <td><input type = "text" id = 'otherVaccineTB' size = '50'></td>
+                                <td><input type = "text" id = 'otherVaccineTB' name = "Other vaccinations textbox" size = '50'></td>
                                 </tr>
                                 <tr></tr>
                                 <!-- Text Box -->
@@ -238,13 +239,13 @@ Description: A Patient intake form for a hospital
                                 <td><label> Please Create an Account. </label></td>
                                 </tr>
                                 <td><label for = "userID"> Username: </label></td>
-                                <td><input type = "text" id = "Username" 
+                                <td><input type = "text" id = "Username" Name = "Username" 
                                 title = "Username must contain at least five letters and cannot begin with a number" onblur="validateUsername()">
                                 <span class = "error" id = "Username-error"></span></td>
                                 </tr>
                                 <tr>
                                 <td><label for = "userID"> Password: </label></td>
-                                <td><input type = "password" id = "Password" maxlength = "30" 
+                                <td><input type = "password" id = "Password" maxlength = "30" name = "Password" 
                                 title = "Password must cointin at least 10 characters, one uppercase letter, one number, one lowercase letter and one special character"
                                 onblur="validatePass()"
                                 oninput="validatePass()"
@@ -254,7 +255,7 @@ Description: A Patient intake form for a hospital
                                 </tr>
                                 <tr>
                                 <td><label for = "userID"> Confirm Password: </label></td>
-                                <td><input type = "password" id = "passwordConfirm" maxlength = "30" 
+                                <td><input type = "password" id = "passwordConfirm" name = "Password Confirmation " maxlength = "30"  
                                 title = "Please Re-enter your password" 
                                 onblur="confirmPass()"
                                 oninput="confirmPass()"

@@ -226,6 +226,12 @@ function validateEmail()
         }
 }
 
+//Range slider 
+function rangeSliderLive(val)
+{
+    document.getElementById("painValue").innerText = val;
+}
+
 //Username Validation 
 function validateUsername()
 {
@@ -293,7 +299,7 @@ function validatePass()
     {
         errorMessage.push("Enter at least one number");
     }
-    if(!Password.match(/[!@#$%&*-_\.+()]/))
+    if(!Password.match(/[!@#$%&*_\.+()-]/))
     {
         errorMessage.push("Enter at least one special character");
     }
@@ -384,7 +390,8 @@ function reviewInput() {
     document.getElementById("showInput").innerHTML = formoutput;
 }
 
-function rangeSliderLive(val)
+//Remove user input
+function removeReview()
 {
-    document.getElementById("painValue").innerText = val;
+    document.getElementById("showInput".innerHTML = "")
 }

@@ -99,3 +99,43 @@ select
     flex-direction: column;
 }
 
+.pass-message
+    {
+        text-align: right;
+        font-family: "optima", sans-serif;
+        font-weight: normal;
+        position: relative;
+        left: 100px;
+        background: transparent;
+        padding: 10px;
+        border-spacing: 2px;
+        border-radius: 20px;
+        color: red;
+    }
+
+#review
+    {
+        margin-top: 5px;
+    }
+
+table.output,
+tr.output,
+td.output
+    {
+        width: 500px;
+        background-color: aqua;
+        padding: 10px;
+        border-spacing: 2px;
+        border-radius: 20px;
+        color: black;
+    }
+
+td.outputdata
+    {
+        width: 500px;
+        background-color: aqua;
+        padding: 10px;
+        border-spacing: 2px;
+    }
+
+
