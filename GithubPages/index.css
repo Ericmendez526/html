@@ -1,0 +1,143 @@
+/*
+Program name: Greatwood General Patient Intake Form
+Author: Eric Y Mendez
+Date: 2/02/2026
+Date last edited: 02/27/2026
+Description: A Patient intake form for a hospital
+*/
+body 
+    {
+        background-color: powderblue;
+    }
+p
+    {
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+h1
+    {
+        color: crimson;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: bold;
+    }
+label
+    {
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+    #unknown
+            {
+                color:red;
+            }
+input  
+    {
+        font-family: sans-serif;
+        background-color: lightgray;
+        border-width: 2px;
+        border-color: black;
+    }
+#Male
+    {
+        accent-color: Blue;
+    }
+#Female
+    {
+        accent-color: DeepPink;
+    }
+textarea 
+    {
+        font-family: sans-serif;
+        background-color: lightgray;
+        border-width: 2px;
+        border-color: black;
+    }
+select 
+    {
+        font-family: sans-serif;
+        background-color: lightgray;
+        border-width: 2px;
+        border-color: black;
+    }
+#footer
+    {
+        margin-top: 600px;
+    }
+#nameOfHospital
+    {
+        font-size: large;
+        font-family: sans-serif;
+        font-style: italic;
+        font-weight: bold;
+        color: crimson;
+    }
+.name-field
+    {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 10px;
+    }
+
+.error
+    {
+        display: block;
+        color: red;
+        font-size: 12px;
+        margin-top: 3px;
+    }
+
+.CSZ-container
+{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.CSZ-field
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.pass-message
+    {
+        text-align: right;
+        font-family: "optima", sans-serif;
+        font-weight: normal;
+        position: relative;
+        left: 100px;
+        background: transparent;
+        padding: 10px;
+        border-spacing: 2px;
+        border-radius: 20px;
+        color: red;
+    }
+
+#review
+    {
+        margin-top: 5px;
+    }
+
+table.output,
+tr.output,
+td.output
+    {
+        width: 500px;
+        background-color: aqua;
+        padding: 10px;
+        border-spacing: 2px;
+        border-radius: 20px;
+        color: black;
+    }
+
+td.outputdata
+    {
+        width: 500px;
+        background-color: aqua;
+        text-align: center;
+        padding: 10px;
+        border-spacing: 2px;
+    }
+
+
+
