@@ -175,7 +175,9 @@ Description: A Patient intake form for a hospital
                                 <!-- Phone Number -->
                                 <tr>
                                 <td><label>Phone Number:</label></td>
-                                <td><input type = "text" name = "Phone Number" id = "phoneNum" pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Please enter your phone number" onblur="validatePhoneNumber()"></td>
+                                <td><input type = "text" name = "Phone Number" id = "phoneNum" 
+                                pattern = "[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Please enter your phone number" onblur="validatePhoneNumber()">
+                                <span class = "error" id = "phoneNum-error"></span></td>
                                 </tr>
                                 <!-- Pain Slider -->
                                 <tr>
@@ -187,7 +189,7 @@ Description: A Patient intake form for a hospital
                                 <!-- History -->
                                 <tr>
                                 <td><label> Do you / your family have a history of the following diseases? </label></td>
-                                <td><input type = 'radio' name = 'History' id = 'heartDisease' name = "Heart Disease" required>
+                                <td><input type = 'radio' name = 'History' id = 'heartDisease' value = "Heart Disease" required>
                                 <label for = 'heartDisease'> Heart Disease </label>
                                 <input type = 'radio' name = 'History' id = 'alzheimers' value = 'Alzheimers'>
                                 <label for = 'alzheimers'> Alzheimer's Disease </label>

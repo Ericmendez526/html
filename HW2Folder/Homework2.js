@@ -226,6 +226,25 @@ function validateEmail()
         }
 }
 
+//Phone Number Validation
+function validatePhoneNumber()
+{
+    const phoneInput = document.getElementById("phoneNum");
+    const phone = phoneInput.value.replace(/\0/g,"");
+
+    if(phone.length != 10)
+    {
+        document.getElementById("phoneNum-error").innerHTML = 
+        "Phone Number cannot be blank";
+        return false;
+    }
+
+    const formattedPhone = phone.slice(0,3)+ "-" + phone.slice(3,6) + "-" + phone.slice(6,10)
+    phoneInput.value = formattedPhone;
+    document.getElementById("phoneNum-error").innerHTML = "";
+    return true;
+}
+
 //Range slider 
 function rangeSliderLive(val)
 {
